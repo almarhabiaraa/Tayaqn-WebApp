@@ -1,0 +1,23 @@
+<!-- nav.component.html -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-header">
+      <button class="hamburger" (click)="toggleMenu()" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <img src="assets/img/Tayaqn_logo.png" class="nav-logo" alt="Logo" />
+    </div>
+
+    <div class="nav-links" [class.active]="isMenuOpen">
+      <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+      <a routerLink="/take-test" routerLinkActive="active">Take Test</a>
+      <a *ngIf="getRole() === 'ADMIN'" routerLink="/model" routerLinkActive="active">Model</a>
+      <a *ngIf="getRole() === 'USER'" routerLink="/contact-us" routerLinkActive="active">Contact us</a>
+      <button class="logout-btn-md" (click)="logout()">Logout</button>
+    </div>
+
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+</nav>

@@ -1,0 +1,44 @@
+<!-- login.component.html -->
+<div class="auth-container">
+  <div class="auth-card">
+    <img src="assets/img/Tayaqn_logo.png" class="auth-logo" alt="Logo" />
+    <h2>Login</h2>
+
+    <form (ngSubmit)="onLogin()">
+      <!-- Email Field -->
+      <div class="form-group">
+        <i class="fas fa-envelope"></i>
+        <input 
+          type="email" 
+          placeholder="Enter your email" 
+          [(ngModel)]="email" 
+          name="email" 
+          required 
+        />
+      </div>
+
+      <!-- Password Field -->
+      <div class="form-group">
+        <i class="fas fa-lock"></i>
+        <input 
+          type="password" 
+          placeholder="Enter your password" 
+          [(ngModel)]="password" 
+          name="password" 
+          required 
+        />
+      </div>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="auth-links">
+      <a routerLink="/register">You don't have an account? Register</a>
+    </div>
+
+    <div class="auth-policy">
+      By continuing, you accept our Terms of Service and Privacy Policy
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,63 @@
+<app-nav></app-nav>
+
+<div class="dashboard-container">
+  <div class="auth-card-style">
+    <!-- No Data Section -->
+    <div *ngIf="historicalData.length === 0" class="no-data">
+      <h2>No Historical Data</h2>
+      <button routerLink="/take-test">Take A Test</button>
+    </div>
+
+    <!-- Data Table Section -->
+    <div *ngIf="historicalData.length > 0" class="data-table">
+      <table>
+        <thead>
+          <tr>
+            <th *ngIf="isAdmin">Full Name</th>
+            <th>Date Test</th>
+            <th>Prediction</th>
+            <th *ngIf="isAdmin">Done By</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of historicalData; let i = index"
+              [class.expanded]="expandedRow === i"
+              (click)="toggleRow(i)">
+            <td *ngIf="isAdmin">{{ item.full_name || '-' }}</td>
+            <td>{{ item.timestamp | date:'short' }}</td>
+            <td>
+              <span class="prediction-badge" [ngClass]="{
+                'positive': item.prediction === 1,
+                'negative': item.prediction === 0
+              }">
+                {{ item.prediction === 1 ? 'Positive' : 'Negative' }}
+              </span>
+            </td>
+            <td *ngIf="isAdmin">{{ item.user_id == connectedUser.id ? 'ADMIN':'USER' }}</td>
+            <td class="toggle-icon">
+              <i class="fas" [ngClass]="{
+                  'fa-chevron-down': expandedRow !== i,
+                  'fa-chevron-up': expandedRow === i
+                }"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Expanded Details Section -->
+      <div *ngFor="let item of historicalData; let i = index"
+           class="expanded-details"
+           [class.show]="expandedRow === i">
+        <div class="details-grid">
+          <div *ngFor="let key of getObjectKeys(item)" class="detail-item">
+            <span class="detail-label">{{ key | titlecase }}</span>
+            <span class="detail-value">{{ item[key] }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

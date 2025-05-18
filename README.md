@@ -1,83 +1,83 @@
-Tayaqn: AI-Driven Diabetes Prediction System Using Federated Learning
-Project Overview
-Tayaqn is an AI-powered diabetes prediction system designed using federated learning architecture. It aims to preserve user data privacy by training models locally on multiple clients and aggregating them globally without sharing raw data.
+# Tayaqn: An AI-Driven Diabetes Prediction System Using Federated Learning Architecture
 
-Project Structure
-frontend/
-Angular-based web application for user interaction and data visualization.
+## 🚀 Project Overview
+**Tayaqn** is a privacy-preserving diabetes prediction system developed as part of a senior project. Leveraging **Federated Learning (FL)**, it enables AI model training across distributed client devices without sharing raw medical data. This ensures user privacy while maintaining high model performance.
 
-local_server/
-Backend server handling local model training and data processing using FastAPI.
+The system integrates advanced AI techniques with secure and scalable software architecture, including both frontend and backend components, to deliver an end-to-end predictive solution.
 
-global_server/
-Central server responsible for federated model aggregation and coordination.
+---
 
-diabetes.ipynb
-Jupyter notebook for AI model development, experimentation, and evaluation.
+## 🔑 Features
+- ✅ **Federated Learning-based AI Model** for secure, decentralized training  
+- 🧠 **Deep Learning with PyTorch** for high-performance prediction  
+- 🌐 **Interactive Web Frontend** for user-friendly data input and prediction results  
+- 🖥️ **FastAPI-powered Local & Global Servers** for scalable deployment  
+- 🔐 **Data Privacy** maintained by keeping user data on local devices
 
-Features
-Privacy-preserving diabetes prediction using federated learning.
+---
 
-Interactive web frontend for data input and prediction results.
+## 📁 Repository Structure
 
-Scalable backend with local and global servers.
+```bash
 
-AI model development using PyTorch.
+Tayaqn/
+├── Dataset/
+│   └── diabetes_health_indicators.csv         # Source dataset
+│
+├── AI_Model/
+│   └── diabetes.ipynb                         # Jupyter notebook for model training and evaluation
+│
+├── frontend/
+│   ├── src/
+│   └── angular_app_files...                   # Angular-based UI for input and prediction
+│
+├── local_server/
+│   ├── main.py                                # FastAPI server for local training
+│   └── utils.py                               # Data preprocessing, training logic
+│
+├── global_server/
+│   ├── aggregator.py                          # Model aggregation logic
+│   └── main.py                                # FastAPI server for coordinating federated learning
+│
+└── README.md
 
-Getting Started
-Prerequisites
-Python 3.8+
+```
+---
 
-Node.js and npm
+## 📊 Model Performance
+The model was evaluated using the **Diabetes Health Indicators** dataset on metrics including:
 
-Angular CLI
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **F1-Score**
 
-Git
+Federated learning results were comparable to centralized training, proving effective in preserving data privacy without sacrificing performance.
 
-Installation
-Clone the repository:
+> *Detailed performance charts or evaluation tables can be added here.*
 
-bash
-Copy
-Edit
-git clone https://github.com/almarhabiaraa/Tayaqn-app.git
-cd Tayaqn-app
-Install backend dependencies:
+---
 
-bash
-Copy
-Edit
-cd local_server
-pip install -r requirements.txt
-Install frontend dependencies:
+## 🔭 Future Work
+- 🔄 Implement **differential privacy** for stronger data protection  
+- 📱 Build **mobile clients** for real-time, on-the-go data collection  
+- 📈 Support for **larger and diverse datasets** to enhance model generalization  
+- 🧩 Integration with **Electronic Health Record (EHR)** systems  
+- 🧠 Include **explainability techniques** like SHAP or LIME for model transparency
 
-bash
-Copy
-Edit
-cd ../frontend
-npm install
-Running the Application Locally
-Backend (Local Server)
-cd ~/Desktop/Tayaqn-app/local_server
-python3 main.py
+---
 
+## 📄 License
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more information.
 
-Backend (Global Server)
-cd ~/Desktop/Tayaqn-app/global_server
-python3 main.py
+---
 
-Frontend (Angular UI)
-cd ~/Desktop/Tayaqn-app/frontend
-ng serve
+## 🙏 Acknowledgments
+- Project supervisors and faculty at [Your University Name]
+- The authors of the **Diabetes Health Indicators** dataset
+- Open-source contributors to **PyTorch**, **FastAPI**, **Angular**, and **Federated Learning frameworks**
 
+---
 
-Deployment
-Backend services can be deployed on platforms like Render or Heroku.
+> Developed by the Tayaqn Team | 2025
 
-Frontend can be deployed using Vercel, Netlify, or similar platforms.
-
-License
-MIT License
-
-Contact
-For questions or support, contact: [Your Email or GitHub Profile]

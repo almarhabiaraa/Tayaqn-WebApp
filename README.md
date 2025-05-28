@@ -1,62 +1,141 @@
-# Tayaqn: An AI-Driven Diabetes Prediction System Using Federated Learning Architecture
+# 🩺 Tayaqn: Smart & Secure Diabetes Prediction System 
+
+**Senior Project:** AI-Driven Diabetes Prediction Using Federated Learning Architecture  
+
+**Tools:** Python · Angular · PyTorch · FastAPI · SQLite · Node.js  
+
+
 
 ## Project Overview
-**Tayaqn** is a privacy-preserving diabetes prediction system developed as part of a senior project. Leveraging **Federated Learning (FL)**, it enables AI model training across distributed client devices without sharing raw medical data. This ensures user privacy while maintaining high model performance.
 
-The system integrates advanced AI techniques with secure and scalable software architecture, including both frontend and backend components, to deliver an end-to-end predictive solution.
+**Tayaqn** is a privacy-focused, AI-powered diabetes prediction system that uses **Federated Learning (FL)** to train models across distributed clients without transferring raw medical data. This approach ensures data privacy while achieving high predictive accuracy.
+
+The project combines advanced deep learning with secure software architecture, providing a complete end-to-end solution with both frontend and backend components.
 
 
 
 ## Features
-- **Federated Learning-based AI Model** for secure, decentralized training  
-- **Deep Learning with PyTorch** for high-performance prediction  
-- **Interactive Web Frontend** for user-friendly data input and prediction results  
-- **FastAPI-powered Local & Global Servers** for scalable deployment  
-- **Data Privacy** maintained by keeping user data on local devices
+
+- **Federated Learning** – Enables distributed training while preserving user data privacy  
+- **Deep Learning with PyTorch** – Builds robust models for diabetes prediction  
+- **Responsive Web Interface** – Built with Angular for a smooth user experience  
+- **FastAPI Servers** – Handles local training and global model aggregation  
+- **Secure Architecture** – Keeps sensitive health data on local devices  
 
 
 
 ## Project Structure
 
 ```bash
-
 Tayaqn/
 ├── Dataset/
 │   └── diabetes_health_indicators.csv         # Source dataset
 │
 ├── AI_Model/
-│   └── diabetes.ipynb                         # Jupyter notebook for model training and evaluation
+│   └── diabetes.ipynb                         # Jupyter notebook for training & evaluation
 │
 ├── frontend/
 │   ├── src/
-│   └── angular_app_files...                   # Angular-based UI for input and prediction
+│   └── angular_app_files...                   # Angular-based UI
 │
 ├── local_server/
-│   ├── main.py                                # FastAPI server for local training
-│   └── utils.py                               # Data preprocessing, training logic
+│   ├── main.py                                # FastAPI local server
+│   └── utils.py                               # Data preprocessing & training logic
 │
 ├── global_server/
-│   ├── aggregator.py                          # Model aggregation logic
-│   └── main.py                                # FastAPI server for coordinating federated learning
+│   ├── main.py                                # FastAPI aggregator server
+│   └── aggregator.py                          # Model aggregation logic
 │
+├── Database/                                  # SQLite database files
+│
+├── Tayaqn_Demo.mov                            # Demo video
 └── README.md
 
 ```
+## Model Performance
+| Model Type         | Accuracy |
+|--------------------|----------|
+| Centralized Model  | 0.8600   |
+| Federated Learning | 0.8519   |
+
+> ✅ The federated learning model achieves nearly the same performance as the centralized model, demonstrating effective privacy-preserving training.
+
+## Web Application Overview
+
+**Tayaqn** offers a responsive, user-friendly interface built for both **patients** and **healthcare professionals** to assess diabetes risk in real time while maintaining user data privacy.
 
 
-## Performance
+### Core Pages & Workflow
 
-The federated learning approach achieves comparable accuracy (0.8519) to the central model (0.86), demonstrating that privacy preservation comes with minimal performance loss.
+- **Registration Page**  
+  New users can sign up by providing a username, email, and password.
+
+- **Login Page**  
+  Registered users log in securely using their credentials.
+
+- **Dashboard (History Page)**  
+  Displays past assessment results. If no tests have been taken, an informative message is shown.
+
+- **Take Test Page**  
+  Users begin the diabetes risk assessment by clicking the **Start Now** button.
 
 
 
+### Diabetes Risk Assessment Workflow
 
-## Future Work
-1. **Mobile Accessibility**: Expand the system to a mobile app, making it more accessible to users on the go.
-2. **Arabic Language Support**: Support Arabic language to reach a broader and more diverse user base.
-3. **Explainable AI**: Incorporate Explainable AI techniques to provide transparent and understandable predictions.
+Each test consists of several structured steps to collect and evaluate relevant health data:
+
+1. **Basic Information**  
+   - Gender  
+   - Age  
+   - Body Mass Index (BMI)
+
+2. **Health Indicators**  
+   - Blood Pressure  
+   - Cholesterol Levels
+
+3. **Lifestyle Factors**  
+   - Smoking  
+   - Alcohol Consumption  
+   - Diet (e.g., fruit/vegetable intake)
+
+4. **Medical History**  
+   - Stroke  
+   - Heart Disease  
+   - Physical Limitations (e.g., difficulty walking)
+
+5. **🏃‍♂️ Health Status**  
+   - Physical Activity  
+   - Mental Health  
+   - General Health (past 30 days)
 
 
 
-> Developed by the Tayaqn Team | 2025
+### Prediction Results
+
+- Results are displayed in the **Dashboard**:
+  - ✅ **Negative** — Low risk of diabetes.
+  - ⚠️ **Positive** — High risk, with a prompt suggesting medical advice.
+
+
+
+### Contact Us Page
+
+Users can reach out with questions or feedback by submitting:
+- Subject  
+- Message  
+
+Responses help improve the system and user experience.
+
+ ## Future Work
+1. 📱 Mobile App Development – Build a mobile version for broader accessibility
+2. 🌍 Arabic Language Support – Support multilingual users with Arabic interface
+3. 🤖 Explainable AI (XAI) – Make predictions interpretable for medical users
+
+
+ ## Demo
+[▶️ Watch Tayaqn Demo](https://youtu.be/HanVSwcSN4w)
+
+## Developed By
+**Tayaqn Team – 2025**
 
